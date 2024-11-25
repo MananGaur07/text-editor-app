@@ -1,0 +1,187 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(../public/How-To-Extract-Text-From-Any-Image-Gear-679592092.webp);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* App Container Styling */
+.app {
+  width: 90%;
+  max-width: 900px;
+  background-color: #ffffff; /* White background for better contrast */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #00334d; /* Dark teal for title text */
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Editor Area Styling */
+.editor {
+  width: 100%;
+  height: 200px;
+  padding: 12px;
+  border: 2px solid #006bb3; /* Blue border to complement the theme */
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  outline: none;
+  resize: none;
+  background-color: #e6f7ff; /* Soft light blue background */
+  color: #00334d; /* Dark teal text for readability */
+  overflow-y: auto;
+}
+
+.editor:empty::before {
+  content: "Start typing here...";
+  color: #aaa; /* Subtle placeholder color */
+  font-style: italic;
+}
+
+/* Toolbar Styling */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #006bb3; /* Primary button color */
+  color: #ffffff; /* White text for contrast */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #004d80; /* Darker blue for hover state */
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Case Conversion Buttons */
+.case-conversion {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.case-conversion button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #5d7994; /* Neutral blue-gray for conversion buttons */
+  color: #ffffff;
+  border: 1px solid #006bb3;
+  margin: 0 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.case-conversion button:hover {
+  background-color: #004d80; /* Hover state for buttons */
+}
+
+.case-conversion button:focus {
+  outline: none;
+}
+
+/* Analysis Section */
+.analysis {
+  width: 100%;
+  padding: 15px;
+  background-color: #e6f7ff; /* Light blue background */
+  border: 2px solid #006bb3; /* Blue border */
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.analysis p {
+  font-size: 1.1rem;
+  color: #00334d; /* Dark teal text */
+  margin: 5px 0;
+}
+
+/* Formatted Text Section */
+.formatted-text {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #006bb3; /* Consistent border color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formatted-text h2 {
+  font-size: 1.5rem;
+  color: #00334d;
+  margin-bottom: 10px;
+}
+
+.formatted-text p {
+  font-size: 1rem;
+  color: #555; /* Slightly lighter text for less emphasis */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .editor {
+    height: 150px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .case-conversion button {
+    padding: 10px;
+  }
+
+  .analysis p,
+  .formatted-text p {
+    font-size: 1rem;
+  }
+}
